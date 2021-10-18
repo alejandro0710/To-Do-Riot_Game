@@ -16,6 +16,6 @@ input.addEventListener('keyup', (a) => {
     li.textContent = input.value;
     list.appendChild(li);
 
-    formText.reset();
+    // formText.reset();
   }
 });
