@@ -8,14 +8,13 @@ function removeElement(event) {
   event.target.remove();
 }
 
-input.addEventListener('keyup', (a) => {
-  if (a.keyCode === 13) {
+input.addEventListener('keyup', (event) => {
+  if (event.keyCode === 13 && input.value !== '') {
     let li = document.createElement('li');
     li.classList.add('element-of-list');
     li.setAttribute('onclick', 'removeElement(event)');
     li.textContent = input.value;
     list.appendChild(li);
-
-    input.value = "";
-  }
+    input.value = '';
+  } 
 });
